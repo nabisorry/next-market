@@ -29,13 +29,13 @@ const config: StorybookConfig = {
     autodocs: 'tag',
   },
   staticDirs: ['public'],
-  babel: async options => ({
+  babel: async (options) => ({
     ...options,
     plugins: [
       '@babel/plugin-proposal-class-properties',
       '@babel/plugin-proposal-private-methods',
       '@babel/plugin-proposal-private-property-in-object',
     ],
-  })
+  }),
 };
 export default config;
