@@ -1,13 +1,4 @@
-export type FontSizesType = {
-  extraSmall: string;
-  small: string;
-  medium: string;
-  mediumLarge: string;
-  large: string;
-  extraLarge: string;
-};
-
-const fontSizes: FontSizesType = {
+const fontSizes = {
   extraSmall: '12px',
   small: '14px',
   medium: '16px',
@@ -15,5 +6,7 @@ const fontSizes: FontSizesType = {
   large: '24px',
   extraLarge: '32px',
 };
+
+export type FontSizes = typeof fontSizes;
 
 export default fontSizes;

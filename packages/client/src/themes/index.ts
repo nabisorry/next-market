@@ -1,21 +1,15 @@
-import colors, { ColorsType } from './colors';
-import fontSizes, { FontSizesType } from './fontSizes';
+import colors from './colors';
+import fontSizes from './fontSizes';
 import letterSpacings from './letterSpacings';
 import lineHeights from './lineHeights';
 import space from './space';
 
-export type ThemeType = {
-  space: string[];
-  fontSizes: FontSizesType;
-  letterSpacings: string[];
-  lineHeights: string[];
-  colors: ColorsType;
-};
-
-export const theme: ThemeType = {
+export const theme = {
   space,
   fontSizes,
   letterSpacings,
   lineHeights,
   colors,
 };
+
+export type Theme = typeof theme;

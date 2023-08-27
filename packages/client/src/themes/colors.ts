@@ -1,20 +1,4 @@
-export type ColorsType = {
-  primary: string;
-  primaryDark: string;
-  primaryLight: string;
-  secondary: string;
-  secondaryDark: string;
-  secondaryLight: string;
-  border: string;
-  danger: string;
-  dangerDark: string;
-  gray: string;
-  black: string;
-  white: string;
-  text: string;
-};
-
-const colors: ColorsType = {
+const colors = {
   primary: '#3f51b5',
   primaryDark: '#2c387e',
   primaryLight: '#6573c3',
@@ -29,5 +13,7 @@ const colors: ColorsType = {
   white: '#ffffff',
   text: '#000000',
 };
+
+export type Colors = typeof colors;
 
 export default colors;
