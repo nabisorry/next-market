@@ -12,10 +12,6 @@
     "isolatedModules": true,
     "incremental": true
   },
-  "include": [
-    "packages/**/next-env.d.ts",
-    "packages/**/*.ts",
-    "packages/**/*.tsx"
-  ],
+  "include": ["packages/**/*.ts"],
   "exclude": ["node_modules"]
 }
