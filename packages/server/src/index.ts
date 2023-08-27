@@ -3,14 +3,15 @@ import jsonServer from 'json-server';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express from 'express';
+import { UserType } from '@types';
 
 const server = jsonServer.create();
 const router = jsonServer.router('db.json');
 const middlewares = jsonServer.defaults();
 
 const port = process1.env.PORT || 8000;
-const authUser = {
-  id: '1',
+const authUser: UserType = {
+  id: 1,
   username: 'hana',
   displayName: 'Hana Kim',
   email: 'hana.kim@example.com',
