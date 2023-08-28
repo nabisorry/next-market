@@ -1,3 +1,9 @@
 {
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@types": ["../types/index"]
+    }
+  },
   "extends": ["../../tsconfig.base.json"]
 }
