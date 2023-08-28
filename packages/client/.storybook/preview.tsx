@@ -5,7 +5,7 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import * as NextImage from 'next/image';
 
 // 내부모듈
-import { theme } from '../themes';
+import { theme } from '../src/themes';
 
 export const GlobalStyle = createGlobalStyle`
   html,

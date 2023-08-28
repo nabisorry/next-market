@@ -182,3 +182,19 @@ const isLineHeightThemeKeys = (
 ): prop is LineHeightThemeKeys => {
   return Object.keys(theme.lineHeights).filter((key) => key == prop).length > 0;
 };
+
+/**
+ * `` style 을 작성해주는 함수
+ * @param props
+ * @param styleKeys
+ * @param theme
+ * @returns
+ */
+export const generateStyles = (props: any, styleKeys: string[]) =>
+  styleKeys
+    .map((key) => {
+      // 케밥케이스 형식으로 변환 font-size, background-color
+      const cssKey = key.replace(/([A-Z])/g, '-$1').toLowerCase();
+      return toPropValue(cssKey, props[key], props.theme);
+    })
+    .join(';');

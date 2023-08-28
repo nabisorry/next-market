@@ -7,7 +7,7 @@ import type {
   CSSPropertyGridRow,
   Responsive,
 } from 'types/styles';
-import { toPropValue } from 'utils/styles';
+import { generateStyles } from 'utils/styles';
 
 type GridProps = BoxProps & {
   gridGap?: Responsive<string>;
@@ -24,27 +24,24 @@ type GridProps = BoxProps & {
   gridArea?: Responsive<string>;
 };
 
+const styleKeysForGrid: (keyof GridProps)[] = [
+  'gridGap',
+  'gridColumnGap',
+  'gridRowGap',
+  'gridColumn',
+  'gridRow',
+  'gridAutoFlow',
+  'gridAutoColumns',
+  'gridAutoRows',
+  'gridTemplateColumns',
+  'gridTemplateRows',
+  'gridTemplateAreas',
+  'gridArea',
+];
+
+// Box 상속
 const Grid = styled(Box)<GridProps>`
-  ${(props) => toPropValue('grid-gap', props.gridGap, props.theme)}
-  ${(props) => toPropValue('grid-column-gap', props.gridColumnGap, props.theme)}
-  ${(props) => toPropValue('grid-row-gap', props.gridRowGap, props.theme)}
-  ${(props) => toPropValue('grid-row', props.gridRow, props.theme)}
-  ${(props) => toPropValue('grid-column', props.gridColumn, props.theme)}
-  ${(props) => toPropValue('grid-auto-flow', props.gridAutoFlow, props.theme)}
-  ${(props) =>
-    toPropValue('grid-auto-columns', props.gridAutoColumns, props.theme)}
-  ${(props) => toPropValue('grid-auto-rows', props.gridAutoRows, props.theme)}
-  ${(props) =>
-    toPropValue(
-      'grid-template-columns',
-      props.gridTemplateColumns,
-      props.theme,
-    )}
-  ${(props) =>
-    toPropValue('grid-template-rows', props.gridTemplateRows, props.theme)}
-  ${(props) =>
-    toPropValue('grid-template-areas', props.gridTemplateAreas, props.theme)}
-  ${(props) => toPropValue('grid-area', props.gridArea, props.theme)}
+  ${(props) => generateStyles(props, styleKeysForGrid)}
 `;
 
 Grid.defaultProps = {
