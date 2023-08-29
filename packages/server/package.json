@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "ts-node src/index.ts",
-    "dev": "node src/index.js",
+    "dev": "yarn nodemon src/index.js", 
     "lint": "eslint 'src/**/*.ts'"
   },
   "devDependencies": {
@@ -15,6 +15,7 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "json-server": "^0.17.3",
+    "nodemon": "^3.0.1",
     "ts-node": "^10.9.1"
   }
 }
