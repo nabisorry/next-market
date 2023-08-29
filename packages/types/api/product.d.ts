@@ -1,9 +1,7 @@
-import { User } from './user';
-
 export type ProductCategory = 'shoes' | 'clothes' | 'book';
 export type ProductCondition = 'new' | 'used';
 
-export type ProductType = {
+export type Product = {
   id: number;
   title: string;
   description: string;

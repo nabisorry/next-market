@@ -5,6 +5,8 @@ import GlobalStyle from '../styles/globals';
 import { SWRConfig } from 'swr';
 import GlobalSpinnerContextProvider from 'contexts/GlobalSpinnerContext';
 import AuthContextProvider from 'contexts/AuthContext';
+import { ShoppingCartContextProvider } from 'contexts/ShoppingCartContext';
+import GlobalSpinner from 'components/organisms/GlobalSpinner';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -13,9 +15,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <ThemeProvider theme={theme}>
         <SWRConfig value={{ shouldRetryOnError: false }}>
           <GlobalSpinnerContextProvider>
-            <AuthContextProvider>
-              <Component {...pageProps} />
-            </AuthContextProvider>
+            <ShoppingCartContextProvider>
+              <AuthContextProvider>
+                <GlobalSpinner />
+                <Component {...pageProps} />
+              </AuthContextProvider>
+            </ShoppingCartContextProvider>
           </GlobalSpinnerContextProvider>
         </SWRConfig>
       </ThemeProvider>

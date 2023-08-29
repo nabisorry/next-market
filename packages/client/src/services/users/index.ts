@@ -11,4 +11,4 @@ type GetUserParams = {
 };
 
 export const getUser = async ({ id }: GetUserParams): Promise<User> =>
-  await userAxios.get(`users/${id}`);
+  await userAxios.get(`/${id}`);

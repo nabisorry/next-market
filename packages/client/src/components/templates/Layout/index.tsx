@@ -1,6 +1,7 @@
 import Separator from 'components/atoms/Separator';
 import Box from 'components/layout/Box';
 import Footer from 'components/organisms/Footer';
+import Header from 'components/organisms/Header';
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -8,7 +9,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => (
   <>
-    {/* <Header /> */}
+    <Header />
     <main>{children}</main>
     <Separator />
     <Box padding={3}>

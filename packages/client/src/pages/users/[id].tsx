@@ -5,6 +5,7 @@ import Box from 'components/layout/Box';
 import Flex from 'components/layout/Flex';
 import Breadcrumb from 'components/molecules/Breadcrumb';
 import Layout from 'components/templates/Layout';
+import UserProductCardListContainer from 'containers/UserProductCardListContainer';
 import UserProfileContainer from 'containers/UserProfileContainer';
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
@@ -14,7 +15,7 @@ import { getAllUsers, getUser } from 'services/users';
 type UserPageProps = InferGetStaticPropsType<typeof getStaticProps>;
 
 const UserPage: NextPage<UserPageProps> = (props: UserPageProps) => {
-  const { id, user } = props;
+  const { id, user, products } = props;
 
   const router = useRouter();
 
@@ -51,7 +52,7 @@ const UserPage: NextPage<UserPageProps> = (props: UserPageProps) => {
               사용자 상품 카드 리스트 컨테이너
               사용자가 서유한 상품 카드 리스트를 표시한다. useSearch로 항상 최신 데이터를 얻는다.
             */}
-            {/* <UserProductCardListContainer userId={id} products={products} /> */}
+            <UserProductCardListContainer userId={id} products={products} />
           </Box>
         </Box>
       </Flex>

@@ -13,7 +13,15 @@ export const authAxios = axios.create({
 });
 
 export const userAxios = axios.create({
-  baseURL: `${API_BASE_URL}/auth`,
+  baseURL: `${API_BASE_URL}/users`,
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+});
+
+export const productAxios = axios.create({
+  baseURL: `${API_BASE_URL}/products`,
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',

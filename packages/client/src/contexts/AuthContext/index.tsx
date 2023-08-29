@@ -37,6 +37,7 @@ type AuthContextProviderProps = {
 };
 
 const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
+  // GET users/me  (쿠키에 token)
   const { data, error, mutate } = useSWR<User>(`${API_BASE_URL}/users/me`);
 
   const isLoading = !data && !error;
