@@ -15,65 +15,28 @@ const Anchor = styled(Text)`
 const Footer = () => {
   return (
     <footer>
-      <Flex
-        flexDirection={{ base: 'column', md: 'row' }}
-        justifyContent="center"
-      >
-        <Box
-          minWidth={{ base: '100%', md: '120px' }}
-          paddingRight={{ base: 0, md: 1 }}
-        >
-          <nav>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>톱</Anchor>
-              </Link>
-            </Box>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>채용</Anchor>
-              </Link>
-            </Box>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>알림</Anchor>
-              </Link>
-            </Box>
-          </nav>
+      <Flex justifyContent="center">
+        <Box marginBottom={2} margin="0 10px">
+          <Link href="/" passHref>
+            <Anchor>홈</Anchor>
+          </Link>
         </Box>
-        <Box
-          minWidth={{ base: '100%', md: '120px' }}
-          paddingRight={{ base: 0, md: 1 }}
-        >
-          <nav>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>사용 규약</Anchor>
-              </Link>
-            </Box>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>개인 정보 정책</Anchor>
-              </Link>
-            </Box>
-            <Box marginBottom={2}>
-              <Link href="/" passHref>
-                <Anchor>배송 및 반품</Anchor>
-              </Link>
-            </Box>
-          </nav>
+        <Box marginBottom={2} margin="0 10px">
+          <Link href="/" passHref>
+            <Anchor>채용</Anchor>
+          </Link>
         </Box>
-        <Box minWidth={{ base: '100%', md: '120px' }}>
-          <nav>
-            <Anchor as="a" href="/" target="_blank">
-              <GitHubIcon size={22} />
-            </Anchor>
-          </nav>
+        <Box marginBottom={2} margin="0 10px">
+          <Link href="/" passHref>
+            <Anchor>알림</Anchor>
+          </Link>
         </Box>
       </Flex>
-      <Box paddingTop={3} paddingBottom={2}>
-        <Text>© 2023 </Text>
-      </Box>
+      <Flex justifyContent="center">
+        <Box paddingTop={3} paddingBottom={2}>
+          <Text color="gray">© 2023 nabisorry </Text>
+        </Box>
+      </Flex>
     </footer>
   );
 };

@@ -33,9 +33,13 @@ const useSearch = ({
     conditions.forEach((condition) => params.append('condition', condition));
   sort && params.append('_sort', sort);
   order && params.append('_order', order);
+
   const query = params.toString();
+
   const { data, error } = useSWR<Product[]>(
-    query.length > 0 ? `${API_BASE_URL}?${query}` : API_BASE_URL,
+    query.length > 0
+      ? `http://localhost:8000/products?${query}`
+      : `http://localhost:8000/products`,
   );
 
   return {
