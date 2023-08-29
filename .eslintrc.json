@@ -7,6 +7,8 @@
     "plugin:import/typescript"
   ],
   "rules": {
+    "import/no-unresolved": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
     "import/order": [2, { "alphabetize": { "order": "asc" } }],
     "prettier/prettier": [
       "off",

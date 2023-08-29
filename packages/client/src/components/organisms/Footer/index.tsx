@@ -15,7 +15,10 @@ const Anchor = styled(Text)`
 const Footer = () => {
   return (
     <footer>
-      <Flex flexDirection={{ base: 'column', md: 'row' }}>
+      <Flex
+        flexDirection={{ base: 'column', md: 'row' }}
+        justifyContent="center"
+      >
         <Box
           minWidth={{ base: '100%', md: '120px' }}
           paddingRight={{ base: 0, md: 1 }}
@@ -23,17 +26,17 @@ const Footer = () => {
           <nav>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">톱</Anchor>
+                <Anchor>톱</Anchor>
               </Link>
             </Box>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">채용</Anchor>
+                <Anchor>채용</Anchor>
               </Link>
             </Box>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">알림</Anchor>
+                <Anchor>알림</Anchor>
               </Link>
             </Box>
           </nav>
@@ -45,17 +48,17 @@ const Footer = () => {
           <nav>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">사용 규약</Anchor>
+                <Anchor>사용 규약</Anchor>
               </Link>
             </Box>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">개인 정보 정책</Anchor>
+                <Anchor>개인 정보 정책</Anchor>
               </Link>
             </Box>
             <Box marginBottom={2}>
               <Link href="/" passHref>
-                <Anchor as="a">배송 및 반품</Anchor>
+                <Anchor>배송 및 반품</Anchor>
               </Link>
             </Box>
           </nav>
