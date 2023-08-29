@@ -31,3 +31,12 @@ export const productAxios = axios.create({
     'Content-Type': 'application/json',
   },
 });
+
+export const purchaseAxios = axios.create({
+  baseURL: `${API_BASE_URL}/purchases`,
+  headers: {
+    Origin: '*',
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+});
