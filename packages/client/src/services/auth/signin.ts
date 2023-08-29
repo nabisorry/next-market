@@ -7,4 +7,4 @@ type SigninParams = {
 };
 
 export const signin = async (params: SigninParams): Promise<User> =>
-  await authAxios.post('/signin', params);
+  (await authAxios.post('/signin', params)).data;

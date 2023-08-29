@@ -7,6 +7,7 @@ export const API_BASE_URL =
 export const authAxios = axios.create({
   baseURL: `${API_BASE_URL}/auth`,
   headers: {
+    Origin: '*',
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
@@ -15,14 +16,17 @@ export const authAxios = axios.create({
 export const userAxios = axios.create({
   baseURL: `${API_BASE_URL}/users`,
   headers: {
+    Origin: '*',
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
 });
 
 export const productAxios = axios.create({
-  baseURL: `${API_BASE_URL}/products`,
+  // API 다른 도메인 테스트
+  baseURL: `http://localhost:8000/products`,
   headers: {
+    Origin: '*',
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },

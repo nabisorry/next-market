@@ -10,6 +10,7 @@ import UserProfileContainer from 'containers/UserProfileContainer';
 import { GetStaticPropsContext, InferGetStaticPropsType, NextPage } from 'next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import { getAllProducts } from 'services/products';
 import { getAllUsers, getUser } from 'services/users';
 
 type UserPageProps = InferGetStaticPropsType<typeof getStaticProps>;
@@ -71,14 +72,17 @@ export const getStaticProps = async ({ params }: GetStaticPropsContext) => {
   if (!params) throw new Error('params is undefined!');
 
   const userId = Number(params.id);
-  // TODO products 나중에 추가
-  const [user] = await Promise.all([getUser({ id: userId })]);
+
+  const [user, products] = await Promise.all([
+    getUser({ id: userId }),
+    getAllProducts({ userId }),
+  ]);
 
   return {
     props: {
       id: userId,
       user,
-      products: [],
+      products,
     },
     revalidate: 10,
   };

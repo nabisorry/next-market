@@ -91,7 +91,6 @@ const ProductCard = ({
             height={imgSize ?? 240}
             containerWidth={size}
             containerHeight={size}
-            objectFit="cover"
             placeholder="blur"
             blurDataURL={blurDataUrl}
             alt="상품 이미지"
@@ -104,7 +103,6 @@ const ProductCard = ({
             height={imgSize ?? 240}
             containerWidth={size}
             containerHeight={size}
-            objectFit="cover"
             alt="상품 이미지"
           />
         )}

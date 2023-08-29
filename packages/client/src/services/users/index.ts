@@ -4,11 +4,11 @@ import { userAxios } from '..';
 import { User } from '@types';
 
 export const getAllUsers = async (): Promise<User[]> =>
-  await userAxios.get('/users');
+  (await userAxios.get('/users')).data;
 
 type GetUserParams = {
   id: number;
 };
 
 export const getUser = async ({ id }: GetUserParams): Promise<User> =>
-  await userAxios.get(`/${id}`);
+  (await userAxios.get(`/${id}`)).data;

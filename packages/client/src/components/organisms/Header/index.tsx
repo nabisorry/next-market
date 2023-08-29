@@ -53,7 +53,7 @@ const Header = () => {
         <Nav as="nav" height="56px" alignItems="center">
           <NavLink>
             <Link href="/" passHref>
-              <Anchor as="a">
+              <Anchor>
                 <AppLogo />
               </Anchor>
             </Link>
@@ -61,28 +61,28 @@ const Header = () => {
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
               <Link href="/search" passHref>
-                <Anchor as="a">모두</Anchor>
+                <Anchor>모두</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
               <Link href="/search/clothes" passHref>
-                <Anchor as="a">의류</Anchor>
+                <Anchor>의류</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
               <Link href="/search/book" passHref>
-                <Anchor as="a">책</Anchor>
+                <Anchor>책</Anchor>
               </Link>
             </Box>
           </NavLink>
           <NavLink>
             <Box display={{ base: 'none', md: 'block' }}>
               <Link href="/search/shoes" passHref>
-                <Anchor as="a">신발</Anchor>
+                <Anchor>신발</Anchor>
               </Link>
             </Box>
           </NavLink>
@@ -91,7 +91,7 @@ const Header = () => {
           <NavLink>
             <Box display={{ base: 'block', md: 'none' }}>
               <Link href="/search" passHref>
-                <Anchor as="a">
+                <Anchor>
                   <SearchIcon />
                 </Anchor>
               </Link>
@@ -99,7 +99,7 @@ const Header = () => {
           </NavLink>
           <NavLink>
             <Link href="/cart" passHref>
-              <Anchor as="a">
+              <Anchor>
                 <BadgeIconButton
                   icon={<ShoppingCartIcon size={24} />}
                   size="24px"
@@ -115,7 +115,7 @@ const Header = () => {
               if (authUser) {
                 return (
                   <Link href={`/users/${authUser.id}`} passHref>
-                    <Anchor as="a">
+                    <Anchor>
                       <ShapeImage
                         shape="circle"
                         src={authUser.profileImageUrl}
@@ -134,7 +134,7 @@ const Header = () => {
                 // 로그인 하지 않은 경우에는 아이콘을 표시
                 return (
                   <Link href="/signin" passHref>
-                    <Anchor as="a">
+                    <Anchor>
                       <PersonIcon size={24} />
                     </Anchor>
                   </Link>
@@ -144,7 +144,7 @@ const Header = () => {
           </NavLink>
           <NavLink>
             <Link href="/sell" passHref>
-              <Button as="a">등록</Button>
+              <Button>등록</Button>
             </Link>
           </NavLink>
         </Nav>

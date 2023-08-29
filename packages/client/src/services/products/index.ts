@@ -1,5 +1,6 @@
 import type { Product, ProductCategory, ProductCondition } from '@types';
-import { productAxios } from 'services';
+import axios from 'axios';
+import { API_BASE_URL, productAxios } from 'services';
 
 export type GetAllProductsParams = {
   category?: ProductCategory;
@@ -37,7 +38,7 @@ export const getAllProducts = async ({
   order && params.append('_order', order);
   const query = params.toString();
 
-  return await productAxios.get(query.length > 0 ? `?${query}` : '');
+  return (await productAxios.get(query.length > 0 ? `?${query}` : '')).data;
 };
 
 export type GetProductParams = {
@@ -52,7 +53,7 @@ export type GetProductParams = {
 export const getProduct = async ({
   id,
 }: GetProductParams): Promise<Product> => {
-  return await productAxios.get(`/${id}`);
+  return (await productAxios.get(`/${id}`)).data;
 };
 
 export type AddProductsParams = {
@@ -67,4 +68,5 @@ export type AddProductsParams = {
  */
 export const addProduct = async ({
   product,
-}: AddProductsParams): Promise<Product> => await productAxios.post('', product);
+}: AddProductsParams): Promise<Product> =>
+  (await productAxios.post('', product)).data;
