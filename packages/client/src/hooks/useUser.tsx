@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import type { User } from '@types';
-import { API_BASE_URL } from 'services';
+import { API_USER_URL } from 'services';
 
 export type UseUserProps = {
   id: number;
@@ -20,7 +20,7 @@ export type UseUser = {
  */
 const useUser = ({ id, initial }: UseUserProps): UseUser => {
   // TOD key 관리 고민
-  const { data, error } = useSWR<User>(`${API_BASE_URL}/users/${id}`);
+  const { data, error } = useSWR<User>(`${API_USER_URL}/users/${id}`);
 
   return {
     user: data ?? initial,

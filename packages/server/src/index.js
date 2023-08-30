@@ -80,6 +80,11 @@ server.get('/users/me', (req, res) => {
 
 server.use(middlewares);
 server.use(router);
+server.use(
+  cors({
+    origin: ['http://localhost:3000'],
+  }),
+);
 server.listen(port, (err) => {
   if (err) {
     console.error(err);

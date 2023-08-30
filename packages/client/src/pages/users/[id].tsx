@@ -49,10 +49,6 @@ const UserPage: NextPage<UserPageProps> = (props: UserPageProps) => {
             <Box marginBottom={1}>
               <Separator />
             </Box>
-            {/*
-              사용자 상품 카드 리스트 컨테이너
-              사용자가 서유한 상품 카드 리스트를 표시한다. useSearch로 항상 최신 데이터를 얻는다.
-            */}
             <UserProductCardListContainer userId={id} products={products} />
           </Box>
         </Box>

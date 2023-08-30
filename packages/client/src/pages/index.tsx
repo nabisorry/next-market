@@ -44,7 +44,7 @@ const Home: NextPage<HomePageProps> = (props: HomePageProps) => {
         >
           <Box width="100%">
             <Text as="h1" marginBottom={0} color="white" variant="extraLarge">
-              Wiki C2C에서
+              nabi market에서
             </Text>
             <Text as="h1" marginTop={0} color="white" variant="extraLarge">
               마음에 드는 아이템을 찾자
@@ -100,7 +100,3 @@ export const getStaticProps = async () => {
 };
 
 export default Home;
-
-// const Home = () => <div>123</div>;
-
-// export default Home;

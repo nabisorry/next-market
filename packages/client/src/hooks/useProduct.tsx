@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import type { Product } from '@types';
-import { API_BASE_URL } from 'services';
+import { API_PRODUCT_URL } from 'services';
 
 export type UseProductProps = {
   id: number;
@@ -14,7 +14,7 @@ export type UseProduct = {
 };
 
 const useProduct = ({ id, initial }: UseProductProps): UseProduct => {
-  const { data, error } = useSWR<Product>(`${API_BASE_URL}/products/${id}`);
+  const { data, error } = useSWR<Product>(`${API_PRODUCT_URL}/products/${id}`);
 
   return {
     product: data ?? initial,

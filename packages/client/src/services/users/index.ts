@@ -4,7 +4,7 @@ import { userAxios } from '..';
 import { User } from '@types';
 
 export const getAllUsers = async (): Promise<User[]> =>
-  (await userAxios.get('/users')).data;
+  (await userAxios.get('')).data;
 
 type GetUserParams = {
   id: number;

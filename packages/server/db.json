@@ -338,6 +338,30 @@
         "profileImageUrl": "/users/3.png",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
       }
+    },
+    {
+      "image": [
+        {
+          "file": {},
+          "src": "blob:http://localhost:3000/dd189448-1057-42a1-a95d-f5a6693e82bc"
+        }
+      ],
+      "title": "테스트 상품",
+      "description": "굿",
+      "category": "shoes",
+      "condition": "used",
+      "price": 5000,
+      "imageUrl": "/products/shoes/feet-1840619_1920.jpeg",
+      "blurDataUrl": "",
+      "owner": {
+        "id": "1",
+        "username": "hana",
+        "displayName": "Hana Kim",
+        "email": "hana.kim@example.com",
+        "profileImageUrl": "/users/1.png",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry"
+      },
+      "id": 48
     }
   ],
   "users": [

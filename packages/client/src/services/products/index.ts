@@ -1,6 +1,5 @@
 import type { Product, ProductCategory, ProductCondition } from '@types';
-import axios from 'axios';
-import { API_BASE_URL, productAxios } from 'services';
+import { productAxios } from 'services';
 
 export type GetAllProductsParams = {
   category?: ProductCategory;
